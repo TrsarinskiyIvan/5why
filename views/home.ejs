@@ -1,0 +1,32 @@
+<%- include('layouts/header'); %>
+    <main>
+        <div class="container">
+            <h3>5 Why list</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Автор</th>
+                        <th>Описание проблемы</th>
+                        <th>Дата</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i=0; i<list.length; i++) {%>
+                        <tr>
+                            <td>
+                                <%= list[i].user.name%>
+                            </td>
+                            <td><a href=" /why/<%=list[i]._id%>">
+                                    <%= list[i].problem%>
+                                </a></td>
+                            <td>
+                                <%= list[i].date.toDateString()%>
+                            </td>
+                        </tr>
+                        <%}%>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <%- include('layouts/footer'); %>
+        

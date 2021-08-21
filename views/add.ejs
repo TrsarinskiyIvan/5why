@@ -1,0 +1,152 @@
+<%- include('layouts/header'); %>
+    <main>
+        <div class="container">
+            <form action="/create" method="post">
+                <section class="row">
+                    <div class="input-field col s6 m3 l2">
+                        <input id="number-shift" type="number" name="numberShift" min="1" max="4" required>
+                        <label for="number-shift">Номер смены</label>
+                    </div>
+                </section>
+                <section class="row">
+                    <div class="input-field col s6 m3 l2">
+                        <select name="lineName" required>
+                            <option value="Clex-1">Clex-1</option>
+                            <option value="Clex-2">Clex-2</option>
+                            <option value="PC-50">PC-50</option>
+                        </select>
+                        <label>Выберите линию</label>
+                    </div>
+                </section>
+                <section class="row">
+                    <div class="input-field col s12 m12 l6">
+                        <textarea required class="materialize-textarea" name="problem" id="problem"></textarea>
+                        <label for="problem">Опишите проблему</label>
+                    </div>
+                </section>
+                <section>
+                    <h4>На что влияет проблема?</h4>
+                    <p>
+                        <label for="qality">
+                            <input required id="qality" type="radio" name="qcdm" value="quality">
+                            <span>Qality</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="cost">
+                            <input id="cost" type="radio" name="qcdm" value="cost">
+                            <span>Cost</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="delivery">
+                            <input id="delivery" type="radio" name="qcdm" value="delivery">
+                            <span>Delivery</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="moral">
+                            <input id="moral" type="radio" name="qcdm" value="moral">
+                            <span>Moral</span>
+                        </label>
+                    </p>
+                </section>
+                <section>
+                    <h4>Что является причиной?</h4>
+                    <p>
+                        <label for="mechanical">
+                            <input required id="mechanical" type="radio" name="reason" value="Механика">
+                            <span>Механика</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="electrical">
+                            <input id="electrical" type="radio" name="reason" value="Электрика">
+                            <span>Электрика</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="control">
+                            <input id="control" type="radio" name="reason" value="Контроль">
+                            <span>Контроль</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="material">
+                            <input id="material" type="radio" name="reason" value="Сырье">
+                            <span>Сырье</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="expirience">
+                            <input id="expirience" type="radio" name="reason" value="Навыки">
+                            <span>Навыки</span>
+                        </label>
+                    </p>
+                </section>
+                <section>
+                    <h4>Анализ корневых причин</h4>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l6">
+                            <textarea required class="materialize-textarea" name="why1" id="why1"></textarea>
+                            <label for="why1">Почему 1</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l6">
+                            <textarea class="materialize-textarea" name="why2" id="why2"></textarea>
+                            <label for="why2">Почему 2</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l6">
+                            <textarea class="materialize-textarea" name="why3" id="why3"></textarea>
+                            <label for="why3">Почему 3</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l6">
+                            <textarea class="materialize-textarea" name="why4" id="why4"></textarea>
+                            <label for="why4">Почему 4</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l6">
+                            <textarea class="materialize-textarea" name="why5" id="why5"></textarea>
+                            <label for="why5">Почему 5</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l6">
+                            <textarea required class="materialize-textarea" name="rca" id="rca"></textarea>
+                            <label for="rca">Коренная причина</label>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h4>Действия</h4>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l6">
+                            <textarea required class="materialize-textarea" name="correctionAction"
+                                id="correctionAction"></textarea>
+                            <label for="correctionAction">Коректирующие действия</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l6">
+                            <input required id="who" type="text" name="correctionWho">
+                            <label for="who">Кто?</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l6">
+                            <input required type="text" class="datepicker" id="correctionWhen" name="correctionWhen">
+                            <label for="correctionWhen">Когда?</label>
+                        </div>
+                    </div>
+                </section>
+                <button class="waves-effect waves-light btn" type="submit">Отправить</button>
+            </form>
+        </div>
+    </main>
+    <%- include('layouts/footer'); %>

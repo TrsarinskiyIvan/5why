@@ -1,0 +1,31 @@
+<%- include('layouts/header'); %>
+    <main>
+        <div class="container">
+            <h4>Мои 5WHY</h4>
+            <% if(list.length){%>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Описание проблемы</th>
+                            <th>Дата</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let i=0; i<list.length; i++) {%>
+                            <tr>
+                                <td><a href=" /why/<%=list[i]._id%>">
+                                        <%= list[i].problem%>
+                                    </a></td>
+                                <td>
+                                    <%= list[i].date.toDateString()%>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                </table>
+                <%} else{%>
+                    <p class="center-align">У Вас нет 5WHY</p>
+                    <%}%>
+        </div>
+    </main>
+    <%- include('layouts/footer'); %>

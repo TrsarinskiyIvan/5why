@@ -1,0 +1,27 @@
+.draw{
+    height: 90vh;
+    /* border-bottom: 1px solid rgb(92, 91, 91); */
+    box-shadow: 10px 5px 15px rgb(160, 160, 160);
+    margin-bottom: 10px;
+
+}
+
+.strong-brand{
+    padding: 0 10px;
+    white-space:nowrap;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    margin-top: 20px;
+}

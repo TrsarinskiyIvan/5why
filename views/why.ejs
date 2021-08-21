@@ -1,0 +1,90 @@
+<%- include('layouts/header'); %>
+    <main>
+        <div class="container">
+            <section class="row">
+                <strong>Автор: </strong>
+                <span>
+                    <%= why.user.name %>
+                </span>
+            </section>
+            <section class="row">
+                <strong>Дата: </strong>
+                <span>
+                    <%= why.date.toDateString() %>
+                </span>
+            </section>
+            <section class="row">
+                <strong>Номер смены: </strong>
+                <span>
+                    <%= why.numberShift %>
+                </span>
+            </section>
+            <section class="row">
+                <strong>Линия: </strong>
+                <span>
+                    <%= why.lineName %>
+                </span>
+            </section>
+            <section>
+                <h4>Опиcание проблемы</h4>
+                <p>
+                    <%= why.problem %>
+                </p>
+            </section>
+            <section>
+                <h4>Влияние проблемы</h4>
+                <p>
+                    <%= why.qcdm.toUpperCase()%>
+                </p>
+            </section>
+            <section>
+                <h4>Причиной является</h4>
+                <p>
+                    <%= why.reason %>
+                </p>
+            </section>
+            <section>
+                <h4>Анализ корневых причин</h4>
+                <p>
+                    <strong>Почему:</strong>
+                    <%= why.why1 %>
+                </p>
+                <p>
+                    <strong>Почему:</strong>
+                    <%= why.why2 %>
+                </p>
+                <p>
+                    <strong>Почему:</strong>
+                    <%= why.why3 %>
+                </p>
+                <p>
+                    <strong>Почему:</strong>
+                    <%= why.why4 %>
+                </p>
+                <p>
+                    <strong>Почему:</strong>
+                    <%= why.why5 %>
+                </p>
+                <p>
+                    <strong>Коренная причина:</strong>
+                    <%= why.rca %>
+                </p>
+            </section>
+            <section>
+                <h4>Корректирующие действия</h4>
+                <p>
+                    <strong>Что:</strong>
+                    <%= why.correctionAction %>
+                </p>
+                <p>
+                    <strong>Кто:</strong>
+                    <%= why.correctionWho %>
+                </p>
+                <p>
+                    <strong>Когда:</strong>
+                    <%= why.correctionWhen.toDateString() %>
+                </p>
+            </section>
+        </div>
+    </main>
+    <%- include('layouts/footer'); %>
